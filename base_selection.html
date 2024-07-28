@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Base Outfit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff98aaba;
+            color: #333;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        header {
+            position: relative;
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210709/pngtree-abstract-backgrouns-set-grunge-texture-minimalistic-art-brush-strokes-style-design-image_739359.jpg");
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-family: ui-monospace;
+            font-size: 1.3rem;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+
+        .back-button button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button button:hover {
+            background-color: #ff6f61;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .options div {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .options div:hover {
+            transform: scale(1.1);
+        }
+
+        .options div img {
+            width: 100%;
+            height: auto;
+        }
+
+        .options div h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function selectBase(outfit) {
+            window.location.href = "design.html";
+        }
+
+        function goBack() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="background"></div>
+    <header>
+        <div class="back-button">
+            <button onclick="goBack()">Back to Home</button>
+        </div>
+        <h1 style="color:black">Select Your Base Outfit</h1>
+    </header>
+
+    <div class="content">
+        <div class="options">
+            <div onclick="selectBase('tshirt')">
+                <img src="https://t4.ftcdn.net/jpg/04/70/41/75/360_F_470417568_jFftLDWqMwxTt7O6XJFEVjd96ulRFqZD.jpg" alt="T-Shirt">
+                <h3>T-Shirt</h3>
+            </div>
+            <div onclick="selectBase('shirt')">
+                <img src="https://pngimg.com/d/dress_shirt_PNG8069.png" alt="Shirt">
+                <h3>Shirt</h3>
+            </div>
+            <div onclick="selectBase('Long Skirt')">
+                <img src="https://i5.walmartimages.com/asr/cea62f5a-3492-4ac4-90d0-319753ee8350.7fd649ec08e784f63e66f99b9c36dcd4.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Frock">
+                <h3>Frock</h3>
+            </div>
+            <!-- Add more options as needed -->
+        </div>
+    </div>
+</body>
+</html>

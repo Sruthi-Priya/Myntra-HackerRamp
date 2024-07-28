@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Designing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-BuUO3yMRg/g8SbRAJNYJ8fus2kZpQlMaZYf9Eox2kXvPZ9qUC8lW9HfSyHRPX8GBho9snQeQd8MFDyAqZlP55g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/90531bb8cd.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        img {
+            width: auto;
+            height: 350px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            background-color: #ff6f61;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 200px;
+            height: calc(100% - 60px);
+            background-color: #f0f0f0;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .technical-sketch {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .options button {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .options button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 200px;
+            right: 0;
+            height: 60px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .top-bar .actions {
+            display: flex;
+        }
+
+        .top-bar .actions button {
+            margin-right: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-bar .actions button:hover {
+            background-color: #e85a4f;
+        }
+
+        .top-bar .back-button {
+            margin-left: auto;
+            background-color: #ccc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-bar .back-button:hover {
+            background-color: #bbb;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .icons i {
+            font-size: 1.5rem;
+            margin-left: 15px;
+            cursor: pointer;
+            color: #ff6f61;
+            transition: color 0.3s ease;
+        }
+
+        .icons i:hover {
+            color: #e85a4f;
+        }
+
+        .upload-contest {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 15%;
+        }
+
+        .upload-contest button {
+            background-color: #ff00a2;
+            width: 100%;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        #myntra {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            left: 3%;
+        }
+
+        .upload-contest button:hover {
+            background-color: #e70695;
+        }
+
+        .fa-solid {
+            margin: 6%;
+            text-align: left;
+        }
+        .back-button{
+            text-align: center;
+            width:8%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="myntra" src="https://1000logos.net/wp-content/uploads/2022/08/Myntra-Logo.png">
+        <h1>Start Designing!</h1>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li>Silhouettes</li>
+            <li>Necklines</li>
+            <li>Back Closures</li>
+            <li>Sleeves</li>
+            <li>Straps</li>
+            <li>Color</li>
+            <li>Fabric</li>
+        </ul>
+    </div>
+
+    <div class="top-bar">
+        <div class="actions">
+            <button><i class="fa-solid fa-pencil"></i></button>
+            <button><i class="fa-solid fa-rotate-left"></i></button>
+            <button><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+        </div>
+        <button class="back-button" onclick="window.location.href='base_selection.html'"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <div class="icons">
+            <i class="fas fa-ruler"></i>
+            <i class="fas fa-align-left"></i>
+            <i class="fas fa-book"></i>
+            <i class="fas fa-tools"></i>
+            <i class="fas fa-info-circle"></i>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Technical Sketch</h2>
+        <div>
+            <label for="length">Length:</label>
+            <select id="length">
+                <option value="micro-mini">Micro Mini</option>
+                <option value="mini">Mini</option>
+                <option value="midi">Midi</option>
+                <option value="maxi">Maxi</option>
+            </select>
+        </div>
+        
+        <div class="technical-sketch">
+            <img src="images/dress.jpg" alt="Front and back Sketch">
+        </div>
+        
+        <div class="options">
+            <button>Woven</button>
+            <button>No Waist Seam</button>
+            <button>Tea Length</button>
+            <button>3/4 Circle</button>
+            <button>Bust and Waist Darts with Front Center</button>
+            <button>Front Seam</button>
+            <button>Center Back Seam</button>
+            <button>Above Elbow Flared Sleeves</button>
+            <button>Set In Sleeves</button>
+            <button>Décolleté Neck</button>
+            <button>Back Straight Seam with No Back Vent</button>
+            <button>Exposed Zipper Full-Length Closure</button>
+            <button>Neckline Facing</button>
+        </div>
+    </div>
+    
+    <div class="upload-contest">
+        <button class="finish-button"><i class="fa-solid fa-check"></i>Finish</button>
+        <button onclick="window.location.href='contest.html'"><i class="fa-solid fa-arrow-up-from-bracket"></i>Upload to Contest</button>
+        <button><i class="fa-solid fa-share-nodes"></i>Share</button>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

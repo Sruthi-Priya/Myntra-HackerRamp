@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Product Designer</title>
+    <link rel="stylesheet" href="create_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <h1>Custom Product Designer</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="sidebar" id="mainSidebar">
+            <h2>Options</h2>
+            <div class="option-group" onclick="toggleSubmenu('clothingTypeMenu')">
+                <h3>Clothing Type</h3>
+                <div class="submenu" id="clothingTypeMenu">
+                    <img src="images/tshirt.png" alt="T-Shirt" onclick="selectClothingType('tshirt')">
+                    tshirt
+                    <img src="images/pants.png" alt="Pants" onclick="selectClothingType('pants')">
+                    <img src="images/skirt.png" alt="Skirt" onclick="selectClothingType('skirt')">
+                    <img src="images/shirt.png" alt="Shirt" onclick="selectClothingType('shirt')">
+                    <img src="images/dress.png" alt="Dress" onclick="selectClothingType('dress')">
+                </div>
+            </div>
+            <div class="option-group" onclick="toggleSubmenu('sleeveStyleMenu')">
+                <h3>Sleeve Style</h3>
+                <div class="submenu" id="sleeveStyleMenu">
+                    <img src="images/none.png" alt="No Sleeve" onclick="selectSleeveStyle('none')">
+                    <img src="images/short.png" alt="Short Sleeve" onclick="selectSleeveStyle('short')">
+                    <img src="images/three_quarter.png" alt="3/4 Sleeve" onclick="selectSleeveStyle('three_quarter')">
+                    <img src="images/full.png" alt="Full Sleeve" onclick="selectSleeveStyle('full')">
+                    <img src="images/puff.png" alt="Puffed Sleeve" onclick="selectSleeveStyle('puff')">
+                    <img src="images/flowy.png" alt="Flowy Sleeve" onclick="selectSleeveStyle('flowy')">
+                    <img src="images/netted.png" alt="Netted Sleeve" onclick="selectSleeveStyle('netted')">
+                </div>
+            </div>
+            <div class="option-group" onclick="toggleSubmenu('patternMenu')">
+                <h3>Pattern</h3>
+                <div class="submenu" id="patternMenu">
+                    <img src="images/none.png" alt="None" onclick="selectPattern('none')">
+                    <img src="images/stripes.png" alt="Stripes" onclick="selectPattern('stripes')">
+                    <img src="images/dots.png" alt="Dots" onclick="selectPattern('dots')">
+                    <img src="images/plaid.png" alt="Plaid" onclick="selectPattern('plaid')">
+                </div>
+            </div>
+            <div class="option-group">
+                <h3>Color</h3>
+                <input type="color" id="colorPicker" value="#ff0000" onchange="changeColor()">
+            </div>
+            <div class="option-group">
+                <h3>Fabric</h3>
+                <select id="fabricSelector" onchange="changeFabric()">
+                    <option value="cotton">Cotton</option>
+                    <option value="polyester">Polyester</option>
+                    <option value="wool">Wool</option>
+                </select>
+            </div>
+        </div>
+        <div class="designer-container">
+            <canvas id="designCanvas" width="500" height="500"></canvas>
+            <div class="tools">
+                <input type="file" id="imageLoader" name="imageLoader" />
+                <button onclick="addText()">Add Text</button>
+                <select id="viewSelector" onchange="changeView()">
+                    <option value="front">Front View</option>
+                    <option value="back">Back View</option>
+                    <option value="left">Left Side View</option>
+                    <option value="right">Right Side View</option>
+                </select>
+            </div>
+        </div>
+    </main>
+    <script src="create_script.js"></script>
+</body>
+</html>
